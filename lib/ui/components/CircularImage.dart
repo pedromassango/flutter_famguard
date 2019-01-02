@@ -4,12 +4,12 @@ class CircularImage extends StatelessWidget{
 
   final double _width, _height;
   final ImageProvider image;
-  final bool showBorder = true;
+  final bool _showBorder;
 
   CircularImage(
       this.image,
-      {double width= 40, double height= 40}
-      ): _width = width, _height= height;
+      {double width= 40, double height= 40, showBorder = false}
+      ): _width = width, _height= height, _showBorder = showBorder;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class CircularImage extends StatelessWidget{
       decoration: BoxDecoration(
           shape: BoxShape.circle,
           image: DecorationImage(image: image),
-        border: showBorder ? Border.all(color: Colors.white, width: 3) : null
+        border: _showBorder ? Border.all(color: Colors.white, width: 3) : null
       ),
     );
   }
