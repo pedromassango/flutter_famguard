@@ -1,0 +1,2 @@
+
+String appName = "Famguard";
