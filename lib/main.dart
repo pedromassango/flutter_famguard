@@ -1,4 +1,5 @@
-import 'package:famguard/data/Texts.dart';
+import 'package:famguard/data/Values.dart';
+import 'package:famguard/ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -9,10 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
       home: SplashPage(),
+      routes: <String, WidgetBuilder>{
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }
@@ -23,6 +24,14 @@ class SplashPage extends StatefulWidget {
 }
 
 class _MySplashPageState extends State<SplashPage> {
+
+  @override
+  void initState() {
+    super.initState();
+
+    // delay by one second before navigate to home page
+    Future.delayed( Duration(seconds: 1), () => Navigator.pushNamed(context, "/home"));
+  }
 
   @override
   Widget build(BuildContext context) {
