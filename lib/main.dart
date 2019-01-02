@@ -38,17 +38,7 @@ class _MySplashPageState extends State<SplashPage> {
     return Scaffold(
       body: Container(
         child: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Color(0xFF6137D7),
-                    Color(0xFFBC3358),
-                  ],
-                  stops: [0,0.7]
-              )
-          ),
+          decoration: BoxDecoration(gradient: appGradient),
           child: Center(
             child: Text(
               appName,
