@@ -25,7 +25,10 @@ class _HomePageState extends State<HomePage> {
       ),
       IconButton(
         onPressed: (){},
-        icon: Icon(Icons.apps, color: Colors.white,),
+        icon: Hero(
+          tag: 'app_icon',
+            child: ImageIcon(AssetImage('images/app_icon.png'), color: Colors.white,)
+        ),
         padding: EdgeInsets.all(32),
       ),
       IconButton(
