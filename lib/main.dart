@@ -32,7 +32,7 @@ class _MySplashPageState extends State<SplashPage> {
     SystemChrome.setEnabledSystemUIOverlays([]);
 
     // delay by one second before navigate to home page
-    Future.delayed( Duration(seconds: 1), () => Navigator.pushNamed(context, "/home"));
+    Future.delayed( Duration(seconds: 3), () => Navigator.pushNamed(context, "/home"));
   }
 
   @override
