@@ -96,9 +96,6 @@ class _HomePageState extends State<HomePage> {
       decoration: BoxDecoration(
           color: Colors.red[700],
           borderRadius: BorderRadius.all(Radius.circular(60)),
-          boxShadow: [
-            BoxShadow(color: Colors.black45, blurRadius: 5)
-          ]
       ),
       child: Center(
           child: Text("Panic".toUpperCase(),
