@@ -11,8 +11,8 @@ class OptionCard extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 95,
-      height: 90,
+      width: 100,
+      height: 85,
       margin: EdgeInsets.all(8),
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
