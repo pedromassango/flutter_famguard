@@ -2,8 +2,10 @@ import 'package:famguard/ui/components/CircularImage.dart';
 import 'package:flutter/material.dart';
 
 class MemberCard extends StatelessWidget {
-  final String imageUrl =
-      "https://celebritypets.net/wp-content/uploads/2016/12/Adriana-Lima.jpg";
+  final String imageUrl = "https://celebritypets.net/wp-content/uploads/2016/12/Adriana-Lima.jpg";
+  final String memberName;
+
+  MemberCard(this.memberName);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class MemberCard extends StatelessWidget {
               CircularImage(NetworkImage(imageUrl)),
               Padding(
                 padding: const EdgeInsets.only(left: 16),
-                child: Text('Massango'),
+                child: Text(memberName),
               )
             ],
           ),

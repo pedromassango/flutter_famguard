@@ -28,7 +28,7 @@ class MembersPage extends StatelessWidget {
               childAspectRatio: 2.5,
               shrinkWrap: true,
               children: members.map((name){
-                return MemberCard();
+                return MemberCard(name);
               }).toList(),
             ),
 
