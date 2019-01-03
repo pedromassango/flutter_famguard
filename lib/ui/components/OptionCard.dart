@@ -16,6 +16,7 @@ class OptionCard extends StatelessWidget{
       height: 90,
       margin: EdgeInsets.all(8),
       child: Card(
+        elevation: 4,
         margin: EdgeInsets.all(0),
         child: InkWell(
           onTap: _onTap,
