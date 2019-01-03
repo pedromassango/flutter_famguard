@@ -52,9 +52,6 @@ class _HomePageState extends State<HomePage> {
                     bottomRight: Radius.circular(80),
                     bottomLeft: Radius.circular(80)
                 ),
-                boxShadow: [
-                  BoxShadow(color: Colors.black54, blurRadius: 15)
-                ]
             ),
 
           ),
