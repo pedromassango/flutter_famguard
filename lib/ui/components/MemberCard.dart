@@ -10,8 +10,6 @@ class MemberCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 10,
-      width: 100,
       child: Card(
         elevation: 2,
         child: Padding(
