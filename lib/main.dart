@@ -1,6 +1,7 @@
 import 'package:famguard/data/Values.dart';
 import 'package:famguard/ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,6 +29,7 @@ class _MySplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
+    SystemChrome.setEnabledSystemUIOverlays([]);
 
     // delay by one second before navigate to home page
     Future.delayed( Duration(seconds: 1), () => Navigator.pushNamed(context, "/home"));
