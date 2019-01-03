@@ -40,13 +40,28 @@ class _MySplashPageState extends State<SplashPage> {
         child: Container(
           decoration: BoxDecoration(gradient: appGradient),
           child: Center(
-            child: Text(
-              appName,
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.white,
-                fontWeight: FontWeight.bold
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+
+                Hero(
+                  tag: "app_icon",
+                  child: ImageIcon(
+                      AssetImage('images/app_icon.png'),
+                    size: 80,
+                    color: Colors.white,
+                  ),
+                ),
+
+                Text(
+                  appName,
+                  style: TextStyle(
+                    fontSize: 22,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+              ],
             ),
           ),
         ),
