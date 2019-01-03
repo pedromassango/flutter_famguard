@@ -134,6 +134,7 @@ class _HomePageState extends State<HomePage> {
             color: Colors.grey[400],
             height: 125,
             width: double.maxFinite,
+            //TODO: place Google Maps here
             child: Image(image: AssetImage('images/maps.jpg',),
               fit: BoxFit.cover,
             ),
