@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 
 String appName = "Famguard";
 
+Color colorGradientTop = Color(0xFF6137D7);
+Color colorGradientBottom = Color(0xFFBC3358);
+
 Gradient appGradient =
     LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter,
-    colors: [Color(0xFF6137D7), Color(0xFFBC3358),], stops: [0,0.7]);
+    colors: [colorGradientTop, colorGradientBottom,], stops: [0,0.7]);
