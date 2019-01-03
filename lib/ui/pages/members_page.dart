@@ -19,8 +19,10 @@ class MembersPage extends StatelessWidget {
               width: double.maxFinite,
               color: colorGradientTop,
               child: Container(
-                margin: EdgeInsets.only(top: 25, bottom: 25, left: 40, right: 40),
-                color: Colors.white,
+                margin: EdgeInsets.only(top: 25, bottom: 20, left: 40, right: 40),
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage('images/qr_code.png'))
+                ),
               ),
             ),
             GridView.count(
