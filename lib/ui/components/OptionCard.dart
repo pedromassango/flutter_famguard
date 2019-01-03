@@ -5,33 +5,32 @@ class OptionCard extends StatelessWidget{
 
   final String title;
   final IconData icon;
+  final GestureTapCallback _onTap;
 
-  OptionCard(this.title, this.icon);
+  OptionCard(this.title, this.icon, this._onTap);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 100,
-      height: 85,
+      height: 90,
       margin: EdgeInsets.all(8),
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(5)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 5,
-            spreadRadius: 0
-          )
-        ]
-      ),
-      child: Column(
-        children: <Widget>[
-          Icon(icon, color: colorGradientBottom,),
-          Spacer(),
-          Text(title, style: TextStyle(fontWeight: FontWeight.bold),)
-        ],
+      child: Card(
+        margin: EdgeInsets.all(0),
+        child: InkWell(
+          onTap: _onTap,
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              children: <Widget>[
+                Icon(icon, color: colorGradientBottom,),
+                Spacer(),
+                Text(title, style: TextStyle(fontWeight: FontWeight.bold),)
+              ],
+
+            ),
+          ),
+        ),
       ),
     );
   }
