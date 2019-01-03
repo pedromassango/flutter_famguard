@@ -133,6 +133,10 @@ class _HomePageState extends State<HomePage> {
           Container(
             color: Colors.grey[400],
             height: 125,
+            width: double.maxFinite,
+            child: Image(image: AssetImage('images/maps.jpg',),
+              fit: BoxFit.cover,
+            ),
           ),
           Spacer(),
 
