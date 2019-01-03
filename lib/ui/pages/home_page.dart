@@ -82,7 +82,9 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         OptionCard('Track', Icons.track_changes,(){ }),
-        OptionCard('Member', Icons.people,(){ }),
+        OptionCard('Member', Icons.people,(){
+          Navigator.of(context).pushNamed('/members');
+        }),
         OptionCard('Public Info', Icons.question_answer,(){ }),
       ],
     );
