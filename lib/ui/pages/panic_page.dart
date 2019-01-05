@@ -29,52 +29,51 @@ class PanicPage extends StatelessWidget {
     );
   }
 
-  Widget buildCircularContainer(AssetImage _icon){
-    return Container(
-      padding: EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(32)),
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 5,
-            color: Colors.black26
-          )
-        ]
-      ),
-      child: Center(
-        child: ImageIcon(_icon, color: baseRedColor,),
-      ),
+  Widget buildCircularContainer(String title, AssetImage _icon){
+    return Column(
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(32)),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 5,
+                color: Colors.black26
+              )
+            ]
+          ),
+          child: Center(
+            child: ImageIcon(_icon, color: baseRedColor,),
+          ),
+        ),
+        Text(title,
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
+        )
+      ],
     );
   }
 
-  Widget buildPanicOptions() {
+  Widget buildPanicOptions(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Column(
-          children: <Widget>[
-            buildCircularContainer(AssetImage('images/ic_healt.png')),
-            Text('Healt',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white),
-            )
-          ],
+        GestureDetector(
+          child: buildCircularContainer('Healt', AssetImage('images/ic_healt.png')),
+          onTap: () => Navigator.of(context).pushNamed('/alert'),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 16, right: 16),
-          child: Column(
-            children: <Widget>[
-              buildCircularContainer(AssetImage('images/ic_robbery.png')),
-              Text('Robbery', style: TextStyle(color: Colors.white),)
-            ],
+          child: GestureDetector(
+            child: buildCircularContainer('Robbery', AssetImage('images/ic_robbery.png')),
+            onTap: () => Navigator.of(context).pushNamed('/alert'),
           ),
         ),
-        Column(
-          children: <Widget>[
-            buildCircularContainer(AssetImage('images/ic_disaster.png')),
-            Text('Disaster', style: TextStyle(color: Colors.white),)
-          ],
+        GestureDetector(
+          child: buildCircularContainer('Disaster', AssetImage('images/ic_disaster.png')),
+          onTap: () => Navigator.of(context).pushNamed('/alert'),
         ),
       ],
     );
@@ -102,7 +101,7 @@ class PanicPage extends StatelessWidget {
 
                   Padding(
                     padding: const EdgeInsets.only(top: 8),
-                    child: buildPanicOptions(),
+                    child: buildPanicOptions(context),
                   )
                 ],
               ),
