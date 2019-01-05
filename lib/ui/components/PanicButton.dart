@@ -18,7 +18,7 @@ class PanicButton extends StatelessWidget{
         borderRadius: BorderRadius.all(Radius.circular(60)),
       ),
       child: Center(
-          child: Text("Panic".toUpperCase(),
+          child: Text("PANIC",
             style: TextStyle(
                 fontSize: 18,
                 color: _backgroundColor == Colors.red ? Colors.white : Colors.red,
