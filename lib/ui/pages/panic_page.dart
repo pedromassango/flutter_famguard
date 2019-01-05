@@ -1,3 +1,4 @@
+import 'package:famguard/ui/components/PanicButton.dart';
 import 'package:flutter/material.dart';
 
 class PanicPage extends StatelessWidget {
@@ -26,27 +27,6 @@ class PanicPage extends StatelessWidget {
     );
   }
 
-  Widget buildPanicButton() {
-    return Container(
-      margin: EdgeInsets.only(bottom: 8, top: 8),
-      width: 130,
-      height: 130,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(60)),
-      ),
-      child: Center(
-          child: Text("Panic".toUpperCase(),
-            style: TextStyle(
-                fontSize: 18,
-                color: Colors.red,
-              fontWeight: FontWeight.bold
-            ),
-          )
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +41,7 @@ class PanicPage extends StatelessWidget {
               alignment: Alignment.center,
               child: Hero(
                 tag: 'panic',
-                child: buildPanicButton(),
+                child: PanicButton(backgroundColor: Colors.white,),
               ),
             ),
             Align(

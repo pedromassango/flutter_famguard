@@ -1,6 +1,7 @@
 import 'package:famguard/data/Values.dart';
 import 'package:famguard/ui/components/CircularImage.dart';
 import 'package:famguard/ui/components/OptionCard.dart';
+import 'package:famguard/ui/components/PanicButton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -92,27 +93,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget buildPanicButton() {
-    return Container(
-      margin: EdgeInsets.only(bottom: 8, top: 8),
-      width: 110,
-      height: 110,
-      decoration: BoxDecoration(
-          color: Colors.red[700],
-          borderRadius: BorderRadius.all(Radius.circular(60)),
-      ),
-      child: Center(
-          child: Text("Panic".toUpperCase(),
-            style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
-              fontWeight: FontWeight.bold
-            ),
-          )
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -146,14 +126,14 @@ class _HomePageState extends State<HomePage> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 16),
+              padding: const EdgeInsets.only(bottom: 10),
               child: Column(
                 children: <Widget>[
                   buildOptions(),
                   GestureDetector(
                     child: Hero(
                       tag: "panic",
-                      child: buildPanicButton(),
+                      child: PanicButton(),
                     ),
                     onTap: (){
                       Navigator.of(context).pushNamed('/panic');
