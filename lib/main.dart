@@ -1,6 +1,7 @@
 import 'package:famguard/data/Values.dart';
 import 'package:famguard/ui/pages/home_page.dart';
 import 'package:famguard/ui/pages/members_page.dart';
+import 'package:famguard/ui/pages/tracks_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       home: SplashPage(),
       routes: <String, WidgetBuilder>{
         '/home': (context) => HomePage(),
-        '/members': (context) => MembersPage()
+        '/members': (context) => MembersPage(),
+        '/tracks': (context) => TracksPage()
       },
     );
   }
