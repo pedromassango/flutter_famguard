@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 class PanicPage extends StatelessWidget {
 
+  final baseRedColor = Colors.red[600];
+
   Widget buildStopButton(){
     return Container(
       width: 110,
@@ -20,9 +22,28 @@ class PanicPage extends StatelessWidget {
       child: Center(
         child: Text('Stop'.toUpperCase(),
           style: TextStyle(
-            color: Colors.red[600],
+            color: baseRedColor,
           ),
         ),
+      ),
+    );
+  }
+
+  Widget buildCircularContainer(AssetImage _icon){
+    return Container(
+      padding: EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(32)),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 5,
+            color: Colors.black26
+          )
+        ]
+      ),
+      child: Center(
+        child: ImageIcon(_icon, color: baseRedColor,),
       ),
     );
   }
@@ -33,7 +54,7 @@ class PanicPage extends StatelessWidget {
       children: <Widget>[
         Column(
           children: <Widget>[
-            Icon(Icons.favorite, size: 40, color: Colors.white,),
+            buildCircularContainer(AssetImage('images/ic_healt.png')),
             Text('Healt',
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white),
@@ -44,14 +65,14 @@ class PanicPage extends StatelessWidget {
           padding: const EdgeInsets.only(left: 16, right: 16),
           child: Column(
             children: <Widget>[
-              Icon(Icons.announcement, size: 40, color: Colors.white,),
+              buildCircularContainer(AssetImage('images/ic_robbery.png')),
               Text('Robbery', style: TextStyle(color: Colors.white),)
             ],
           ),
         ),
         Column(
           children: <Widget>[
-            Icon(Icons.business, size: 40, color: Colors.white,),
+            buildCircularContainer(AssetImage('images/ic_disaster.png')),
             Text('Disaster', style: TextStyle(color: Colors.white),)
           ],
         ),
@@ -62,7 +83,7 @@ class PanicPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red[600],
+      backgroundColor: baseRedColor,
       body: Padding(
         padding: const EdgeInsets.only(
           bottom: 32,
