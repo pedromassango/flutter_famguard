@@ -6,7 +6,7 @@ class PanicPage extends StatelessWidget {
   Widget buildStopButton(){
     return Container(
       width: 110,
-      height: 32,
+      height: 33,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -27,6 +27,38 @@ class PanicPage extends StatelessWidget {
     );
   }
 
+  Widget buildPanicOptions() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Column(
+          children: <Widget>[
+            Icon(Icons.favorite, size: 40, color: Colors.white,),
+            Text('Healt',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white),
+            )
+          ],
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 16, right: 16),
+          child: Column(
+            children: <Widget>[
+              Icon(Icons.announcement, size: 40, color: Colors.white,),
+              Text('Robbery', style: TextStyle(color: Colors.white),)
+            ],
+          ),
+        ),
+        Column(
+          children: <Widget>[
+            Icon(Icons.business, size: 40, color: Colors.white,),
+            Text('Disaster', style: TextStyle(color: Colors.white),)
+          ],
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,41 +75,13 @@ class PanicPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Hero(
-                      tag: 'panic',
-                      child: PanicButton(backgroundColor: Colors.white,),
-                    ),
+                    tag: 'panic',
+                    child: PanicButton(backgroundColor: Colors.white,),
+                  ),
 
                   Padding(
                     padding: const EdgeInsets.only(top: 8),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Column(
-                          children: <Widget>[
-                            Icon(Icons.favorite, size: 40,color: Colors.white,),
-                            Text('Healt',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16, right: 16),
-                          child: Column(
-                            children: <Widget>[
-                              Icon(Icons.announcement, size: 40,color: Colors.white,),
-                              Text('Robbery', style: TextStyle(color: Colors.white),)
-                            ],
-                          ),
-                        ),
-                        Column(
-                          children: <Widget>[
-                            Icon(Icons.business, size: 40,color: Colors.white,),
-                            Text('Disaster', style: TextStyle(color: Colors.white),)
-                          ],
-                        ),
-                      ],
-                    ),
+                    child: buildPanicOptions(),
                   )
                 ],
               ),
