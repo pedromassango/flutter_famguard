@@ -1,4 +1,5 @@
 import 'package:famguard/data/Values.dart';
+import 'package:famguard/ui/pages/alert_page.dart';
 import 'package:famguard/ui/pages/home_page.dart';
 import 'package:famguard/ui/pages/members_page.dart';
 import 'package:famguard/ui/pages/panic_page.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/members': (context) => MembersPage(),
         '/tracks': (context) => TracksPage(),
-        '/panic': (context) => PanicPage()
+        '/panic': (context) => PanicPage(),
+        '/alert': (context) => AlertPage()
       },
     );
   }
