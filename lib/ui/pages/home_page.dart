@@ -104,8 +104,9 @@ class _HomePageState extends State<HomePage> {
       child: Center(
           child: Text("Panic".toUpperCase(),
             style: TextStyle(
-                fontSize: 20,
-                color: Colors.white
+                fontSize: 18,
+                color: Colors.white,
+              fontWeight: FontWeight.bold
             ),
           )
       ),
@@ -150,7 +151,10 @@ class _HomePageState extends State<HomePage> {
                 children: <Widget>[
                   buildOptions(),
                   GestureDetector(
-                    child: buildPanicButton(),
+                    child: Hero(
+                      tag: "panic",
+                      child: buildPanicButton(),
+                    ),
                     onTap: (){
                       Navigator.of(context).pushNamed('/panic');
                     },
