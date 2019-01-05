@@ -37,13 +37,52 @@ class PanicPage extends StatelessWidget {
         ),
         child: Stack(
           children: <Widget>[
-            Align(
-              alignment: Alignment.center,
-              child: Hero(
-                tag: 'panic',
-                child: PanicButton(backgroundColor: Colors.white,),
+            Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Hero(
+                      tag: 'panic',
+                      child: PanicButton(backgroundColor: Colors.white,),
+                    ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Column(
+                          children: <Widget>[
+                            Icon(Icons.favorite, size: 40,color: Colors.white,),
+                            Text('Healt',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.white),
+                            )
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, right: 16),
+                          child: Column(
+                            children: <Widget>[
+                              Icon(Icons.announcement, size: 40,color: Colors.white,),
+                              Text('Robbery', style: TextStyle(color: Colors.white),)
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Icon(Icons.business, size: 40,color: Colors.white,),
+                            Text('Disaster', style: TextStyle(color: Colors.white),)
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               ),
             ),
+
             Align(
               alignment: Alignment.bottomCenter,
               child: buildStopButton(),
