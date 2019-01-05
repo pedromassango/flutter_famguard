@@ -149,7 +149,12 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: <Widget>[
                   buildOptions(),
-                  buildPanicButton(),
+                  GestureDetector(
+                    child: buildPanicButton(),
+                    onTap: (){
+                      Navigator.of(context).pushNamed('/panic');
+                    },
+                  ),
                   Text("Click 3 times to send emergency message",
                   style: TextStyle(color: Colors.grey),)
                 ],
