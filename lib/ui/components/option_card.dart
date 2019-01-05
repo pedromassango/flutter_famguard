@@ -1,4 +1,4 @@
-import 'package:famguard/data/Values.dart';
+import 'package:famguard/data/values.dart';
 import 'package:flutter/material.dart';
 
 class OptionCard extends StatelessWidget{

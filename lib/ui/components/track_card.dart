@@ -1,5 +1,5 @@
-import 'package:famguard/data/Values.dart';
-import 'package:famguard/ui/components/CircularImage.dart';
+import 'package:famguard/data/values.dart';
+import 'package:famguard/ui/components/circular_image.dart';
 import 'package:flutter/material.dart';
 
 class TrackCard extends StatelessWidget{

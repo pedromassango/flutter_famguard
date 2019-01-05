@@ -1,7 +1,7 @@
-import 'package:famguard/data/Values.dart';
-import 'package:famguard/ui/components/CircularImage.dart';
-import 'package:famguard/ui/components/OptionCard.dart';
-import 'package:famguard/ui/components/PanicButton.dart';
+import 'package:famguard/data/values.dart';
+import 'package:famguard/ui/components/circular_image.dart';
+import 'package:famguard/ui/components/option_card.dart';
+import 'package:famguard/ui/components/panic_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

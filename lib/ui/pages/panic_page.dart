@@ -1,4 +1,4 @@
-import 'package:famguard/ui/components/PanicButton.dart';
+import 'package:famguard/ui/components/panic_button.dart';
 import 'package:flutter/material.dart';
 
 class PanicPage extends StatelessWidget {
