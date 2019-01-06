@@ -31,11 +31,10 @@ class _MySplashPageState extends State<SplashPage> {
           var prefs = SharedPreferencesHelper();
           prefs.isLoggedIn()
           .then((value){
-            if(value == null){
-              Navigator.pushNamed(context,'/login');
-            }else {
-              Navigator.pushNamed(context, value ? '/home' : '/login');
-            }
+            Navigator.pushNamed(
+                context,
+                (value != null && value)  ? '/home' : '/login'
+            );
           });
         }else{
           _scaffoldKey.currentState.showSnackBar(
