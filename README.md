@@ -8,15 +8,15 @@ A Flutter app for monitor members family.
 <img src="/screenshots/4.png" width="260" height="480"> <img src="/screenshots/5.png" width="260" height="480"> <img src="/screenshots/6.png" width="260" height="480">
 
 ## TODO
-[x] Splash page
-[x] Login UI
-[x] Panic UI
-[x] Family Members UI
-[x] Member track UI
-[ ] Login with Google Sign in
-[ ] Include/remove family members
-[ ] Send alert to family members when the panic button is clicked
-[ ] More...
+- [x] Splash page
+- [x] Login UI
+- [x] Panic UI
+- [x] Family Members UI
+- [x] Member track UI
+- [ ] Login with Google Sign in
+- [ ] Include/remove family members
+- [ ] Send alert to family members when the panic button is clicked
+- [ ] More...
 
 ## Contributing
 
