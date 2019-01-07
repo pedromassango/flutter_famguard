@@ -22,6 +22,10 @@ A Flutter app for monitor members family.
 
 if you want to contribute with code please fork the project then revise the current code, then make your changes then make the pull request.
 
+## Support
+:heart: Star :heart: the repo to support the project or :smile:[Follow Me](https://github.com/pedromassango).Thanks!
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/pedromassangom.svg?style=social&label=Follow)](https://twitter.com/pedromassangom)
 
 ## Getting Started
 
