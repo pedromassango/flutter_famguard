@@ -4,7 +4,7 @@ A Flutter app for monitor members family.
 
 ## Screenshots
 
-<img src="/screenshots/1.png" width="270" height="480">
+<img src="/screenshots/1.png" width="260" height="480">
 
 ## TODO
 [x] Splash page
