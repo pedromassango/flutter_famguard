@@ -1,6 +1,6 @@
 # Famguard
 
-A new Flutter project. App for monitor members family
+A Flutter app for monitor members family.
 
 ## Screenshots
 
@@ -16,6 +16,10 @@ A new Flutter project. App for monitor members family
 [ ] Include/remove family members
 [ ] Send alert to family members when the panic button is clicked
 [ ] More...
+
+## Contributing
+
+if you want to contribute with code please fork the project then revise the current code, then make your changes then make the pull request.
 
 
 ## Getting Started
