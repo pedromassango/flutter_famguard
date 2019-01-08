@@ -61,7 +61,7 @@ class PanicPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         GestureDetector(
-          child: buildCircularContainer('Healt', AssetImage('images/ic_healt.png')),
+          child: buildCircularContainer('Health', AssetImage('images/ic_healt.png')),
           onTap: () => Navigator.of(context).pushNamed('/alert'),
         ),
         Padding(
