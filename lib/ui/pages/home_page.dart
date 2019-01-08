@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         padding: EdgeInsets.all(32),
       ),
       IconButton(
-        onPressed: (){},
+        onPressed: () => Navigator.of(context).pushNamed('/settings'),
         icon: Icon(Icons.settings, color: Colors.white,),
         padding: EdgeInsets.all(32),
       ),

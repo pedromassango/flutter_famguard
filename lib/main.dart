@@ -3,6 +3,7 @@ import 'package:famguard/ui/pages/home_page.dart';
 import 'package:famguard/ui/pages/login_page.dart';
 import 'package:famguard/ui/pages/members_page.dart';
 import 'package:famguard/ui/pages/panic_page.dart';
+import 'package:famguard/ui/pages/settings_page.dart';
 import 'package:famguard/ui/pages/splash_page.dart';
 import 'package:famguard/ui/pages/tracks_page.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         '/tracks': (context) => TracksPage(),
         '/panic': (context) => PanicPage(),
         '/alert': (context) => AlertPage(),
-        '/login': (context) => LoginPage()
+        '/login': (context) => LoginPage(),
+        '/settings': (context) => SettingsPage()
       },
     );
   }
