@@ -20,6 +20,22 @@ class MemberCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 16),
                 child: Text(memberName),
+              ),
+              Spacer(),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Container(
+                    width: 22,
+                    height: 22,
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.all(Radius.circular(50))
+                    ),
+                    child: Center(child: Icon(Icons.clear, color: Colors.white,size: 14,)),
+                  ),
+                ],
               )
             ],
           ),
